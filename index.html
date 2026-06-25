@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=[];var x=false;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
-</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#34336F"/><text x="50" y="63" font-size="40" font-family="serif" fill="#F3EDE2" text-anchor="middle">花</text></svg></template>
-<helmet>
+<title>Hanaui PR｜学校のらしさを、ともに織り上げる。</title>
+<meta name="description" content="専門学校・私立学校のための広報・PR支援。ブランディング設計や戦略立案から、発信のネタづくり、プレスリリース作成、メディア対応まで伴走します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/favicon-180.png">
 <style>
   * { box-sizing: border-box; }
@@ -38,62 +28,35 @@
     text-wrap: pretty;
   }
 </style>
-</helmet>
-
-<div ref="{{ rootRef }}" lang="ja" style="--font-head: {{ headStack }}; --font-body: {{ bodyStack }}; font-family: var(--font-body, 'Noto Sans JP', sans-serif); background: #F3EDE2; color: #3C3942; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+</head>
+<body>
+<div lang="ja" style="--font-head: 'Noto Serif JP', serif; --font-body: 'Noto Sans JP', sans-serif; font-family: var(--font-body, 'Noto Sans JP', sans-serif); background: #F3EDE2; color: #3C3942; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
 
   <!-- ======= HEADER ======= -->
   <header style="position: sticky; top: 0; z-index: 80; display: flex; align-items: center; justify-content: space-between; padding: 12px clamp(20px, 5vw, 64px); background: rgba(243,237,226,.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(52,51,111,.08);">
     <a href="#top" style="text-decoration: none; display: flex; align-items: center;">
       <img src="assets/logo-h-color.png" alt="Hanaui PR" style="height: 46px; width: auto; display: block;">
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(14px, 2.4vw, 34px);">
-      <a href="About.html" style="{{ navLink }}">About</a>
-      <a href="Service.html" style="{{ navLink }}">Service</a>
-      <a href="Works.html" style="{{ navLink }}">Works</a>
-      <a href="https://note.com" target="_blank" rel="noopener" style="{{ navLink }}">note</a>
-      <a href="Contact.html" style="{{ navLink }}">Contact</a>
-      <a href="Contact.html" style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; letter-spacing: .04em; color: #fff; background: #34336F; padding: 9px 18px; border-radius: 999px; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(194,162,76,.55), 0 8px 22px -12px rgba(52,51,111,.7);">ご相談はこちら</a>
+    <nav style="display: flex; align-items: center; gap: clamp(15px, 2vw, 28px);">
+      <a href="About.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;"><span style="font-size:13px;letter-spacing:.05em;color:#3C3942;line-height:1;">About</span><span style="font-size:9px;letter-spacing:.1em;color:#9A96A4;line-height:1;">私たちのこと</span></a>
+      <a href="Story.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;"><span style="font-size:13px;letter-spacing:.05em;color:#3C3942;line-height:1;">Story</span><span style="font-size:9px;letter-spacing:.1em;color:#9A96A4;line-height:1;">はじまりの物語</span></a>
+      <a href="Service.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;"><span style="font-size:13px;letter-spacing:.05em;color:#3C3942;line-height:1;">Service</span><span style="font-size:9px;letter-spacing:.1em;color:#9A96A4;line-height:1;">ご支援の流れ</span></a>
+      <a href="Works.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;"><span style="font-size:13px;letter-spacing:.05em;color:#3C3942;line-height:1;">Works</span><span style="font-size:9px;letter-spacing:.1em;color:#9A96A4;line-height:1;">実績</span></a>
+      <a href="Contact.html" style="display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;"><span style="font-size:13px;letter-spacing:.05em;color:#3C3942;line-height:1;">Contact</span><span style="font-size:9px;letter-spacing:.1em;color:#9A96A4;line-height:1;">ご相談</span></a>
+      <a href="Contact.html" style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; letter-spacing: .04em; color: #fff; background: #34336F; padding: 10px 18px; border-radius: 999px; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(194,162,76,.55), 0 8px 22px -12px rgba(52,51,111,.7);">ご相談はこちら</a>
     </nav>
   </header>
 
   <a id="top"></a>
 
   <!-- ======= HERO A : split / classic ======= -->
-  <sc-if value="{{ isA }}" hint-placeholder-val="{{ true }}">
-  <section style="position: relative; min-height: 88vh; display: grid; grid-template-columns: 1.05fr 1fr; align-items: stretch; background: #F3EDE2;">
-    <div style="display: flex; flex-direction: column; justify-content: center; padding: clamp(40px, 7vw, 104px); position: relative;">
-      <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 64%; background: linear-gradient(180deg, transparent, rgba(194,162,76,.6), transparent);"></div>
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 28px;">
-        <span style="width: 34px; height: 1px; background: #C2A24C;"></span>
-        <span style="font-size: 11px; letter-spacing: .32em; color: #C2A24C; text-transform: uppercase;">School Public Relations</span>
-      </div>
-      <h1 style="font-family: var(--font-head, serif); font-weight: 600; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.42; letter-spacing: .03em; color: #34336F; margin: 0;">学校のらしさを、<br>ともに織り上げる。</h1>
-      <p style="margin: 32px 0 0; max-width: 30em; font-size: clamp(14px, 1.1vw, 16px); line-height: 2.05; color: #56535E;">学校という縦糸を、広報で強くする。<br>いろいろなご縁を、横糸に織り込む。<br>その学校にしか出せない価値が、花ひらく。</p>
-      <div style="display: flex; align-items: center; gap: 22px; margin-top: 44px;">
-        <a href="Contact.html" style="{{ ctaPrimary }}">無料相談からはじめる</a>
-        <a href="Service.html" style="{{ ctaGhost }}">サービスを見る</a>
-      </div>
-    </div>
-    <div style="position: relative; padding: clamp(20px, 3vw, 44px) clamp(20px,3vw,44px) clamp(20px,3vw,44px) 0;">
-      <!-- PHOTO -->
-      <figure style="margin: 0; height: 100%; min-height: 420px; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(150deg, #E6DCF0 0%, #F1E9DD 55%, #E4DAC4 100%); box-shadow: 0 26px 70px -34px rgba(52,51,111,.55);">
-        <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px);"></div>
-        <div style="position: absolute; top: 18px; left: 18px; font-size: 10px; letter-spacing: .22em; color: #34336F; background: rgba(255,255,255,.7); padding: 5px 10px; border-radius: 2px;">撮影カット 01</div>
-        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 24px;">
-          <span style="font-family: var(--font-head, serif); font-size: 18px; color: #34336F; letter-spacing: .06em;">窓辺で作業する様子</span>
-          <span style="font-size: 12px; color: #6E6A78; letter-spacing: .04em;">縦位置・全幅／自然光・人柄が伝わる引き</span>
-        </div>
-      </figure>
-    </div>
-  </section>
-  </sc-if>
+  
 
   <!-- ======= HERO B : full-bleed image + left scrim (image, not video) ======= -->
-  <sc-if value="{{ isB }}" hint-placeholder-val="{{ true }}">
+  
   <section style="position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: #221F48;">
     <!-- IMAGE (full-bleed placeholder) -->
-    <img src="https://lh3.googleusercontent.com/d/1tdQjxoXw6UeUJRcvkPHEJO5tei7em3em=w1400" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 32%;" alt="窓辺で作業する様子">
+    <img src="assets/hero-consult.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%;" alt="窓辺の席で担当者の相談に向き合う伴走支援のシーン">
     <!-- gradient overlay for legibility kept below -->
     <div style="position: absolute; inset: 0; background: linear-gradient(120deg, rgba(34,31,72,.15), transparent 60%);"></div>
     <!-- SCRIM: deeper on the left so the copy sits on a calm field; the image breathes on the right -->
@@ -108,7 +71,7 @@
           <span style="font-size: 11px; letter-spacing: .34em; color: #C7B5DE; text-transform: uppercase;">School Public Relations</span>
         </div>
         <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: .06em; color: rgba(243,237,226,.86);">専門学校・私立学校のための広報・PR支援</p>
-        <h1 style="font-family: var(--font-head, serif); font-weight: 500; font-size: clamp(34px, 4.8vw, 66px); line-height: 1.46; letter-spacing: .04em; color: #fff; margin: 0; text-shadow: 0 2px 30px rgba(18,16,44,.4);">学校のらしさを、<br>ともに織り上げる。</h1>
+        <h1 style="font-family: var(--font-head, serif); font-weight: 500; font-size: clamp(34px, 4.8vw, 66px); line-height: 1.46; letter-spacing: .04em; color: #fff; margin: 0; text-shadow: 0 2px 30px rgba(18,16,44,.4);">その学校にしかない価値を、<br>選ばれる理由に。</h1>
         <p style="margin: 34px 0 0; max-width: 30em; font-size: clamp(14px, 1.1vw, 16px); line-height: 2.1; color: rgba(243,237,226,.92);">ブランディング設計や戦略立案から、発信のネタづくり、プレスリリース作成、メディア対応まで。学校の魅力が、必要な人に届く流れを一緒につくります。</p>
         <div style="display: flex; align-items: center; gap: 22px; margin-top: 46px; flex-wrap: wrap;">
           <a href="Contact.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: .05em; color: #34336F; background: #F3EDE2; padding: 15px 32px; border-radius: 999px; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(194,162,76,.6), 0 14px 30px -16px rgba(0,0,0,.45);">お見積もり・ご相談はこちら</a>
@@ -117,32 +80,10 @@
       </div>
     </div>
   </section>
-  </sc-if>
+  
 
   <!-- ======= HERO C : editorial woven ======= -->
-  <sc-if value="{{ isC }}" hint-placeholder-val="{{ true }}">
-  <section style="position: relative; min-height: 90vh; display: grid; grid-template-columns: 1.18fr 1fr; background: #F3EDE2;">
-    <div style="position: relative; overflow: hidden; background: linear-gradient(135deg, #E6DCF0 0%, #DCD0EC 50%, #C9BBE0 100%);">
-      <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.06) 0 1px, transparent 1px 11px), repeating-linear-gradient(0deg, rgba(52,51,111,.06) 0 1px, transparent 1px 11px);"></div>
-      <div style="position: absolute; top: 24px; left: 24px; font-size: 10px; letter-spacing: .22em; color: #34336F; background: rgba(255,255,255,.66); padding: 6px 11px; border-radius: 2px;">撮影カット 01</div>
-      <div style="position: absolute; left: 24px; bottom: 26px; display: flex; flex-direction: column; gap: 6px;">
-        <span style="font-family: var(--font-head, serif); font-size: 17px; color: #34336F; letter-spacing: .06em;">窓辺で作業する様子</span>
-        <span style="font-size: 11.5px; color: #5b5768;">縦位置・全幅／自然光・人柄が伝わる引き</span>
-      </div>
-    </div>
-    <div style="position: relative; display: flex; flex-direction: column; justify-content: center; padding: clamp(40px, 6vw, 96px); overflow: hidden;">
-      <div style="position: absolute; top: 14%; left: -10%; width: 130%; height: 1px; background: linear-gradient(90deg, transparent, rgba(194,162,76,.55), transparent); transform-origin: left;"></div>
-      <div style="position: absolute; bottom: 22%; left: -10%; width: 130%; height: 1px; background: linear-gradient(90deg, transparent, rgba(199,181,222,.8), transparent);"></div>
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px;">
-        <span style="width: 30px; height: 1px; background: #C2A24C;"></span>
-        <span style="font-size: 11px; letter-spacing: .3em; color: #C2A24C; text-transform: uppercase;">School PR Partner</span>
-      </div>
-      <h1 style="font-family: var(--font-head, serif); font-weight: 600; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.5; letter-spacing: .04em; color: #34336F; margin: 0;">学校のらしさを、<br>ともに織り上げる。</h1>
-      <p style="margin: 30px 0 0; max-width: 26em; font-size: clamp(14px, 1.05vw, 15.5px); line-height: 2.05; color: #56535E;">学校という縦糸を、広報で強くする。<br>いろいろなご縁を、横糸に織り込む。<br>その学校にしか出せない価値が、花ひらく。</p>
-      <div style="margin-top: 42px;"><a href="Contact.html" style="{{ ctaPrimary }}">無料相談からはじめる</a></div>
-    </div>
-  </section>
-  </sc-if>
+  
 
   <!-- ======= 2. 導入メッセージ ======= -->
   <section data-fade style="padding: clamp(52px, 6.5vw, 84px) clamp(20px, 6vw, 80px); display: flex; justify-content: center; text-align: center;">
@@ -162,16 +103,36 @@
         <p style="font-size: 14.5px; line-height: 2.05; color: #56535E; margin: 0 0 26px; max-width: 24em;">専門学校・私立学校の広報で、よく伺うお悩みです。ひとつでも近いものがあれば、お気軽にご相談ください。</p>
         <!-- PHOTO -->
         <figure style="margin: 0; aspect-ratio: 16/10; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(140deg, #ECE4F2, #F1E9DD 60%, #E4DAC4); box-shadow: 0 18px 50px -28px rgba(52,51,111,.45);">
-          <img src="assets/opt/worries-desk.jpg" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="募集広報の資料・SNS投稿案・年間行事カレンダー・付箋に囲まれて思案する広報担当者">
+          <img src="assets/worries-desk.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="募集広報の資料・SNS投稿案・年間行事カレンダー・付箋に囲まれて思案する広報担当者">
         </figure>
       </div>
       <ul data-fade style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px;">
-        <sc-for list="{{ worries }}" as="w" hint-placeholder-count="6">
+        
           <li style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 4px; border-bottom: 1px solid rgba(52,51,111,.1);">
             <span style="flex: none; margin-top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #C2A24C; display: inline-flex; align-items: center; justify-content: center; color: #C2A24C; font-size: 11px;">✓</span>
-            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">{{ w }}</span>
+            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">日々の業務に追われ、広報の戦略をじっくり考える時間が取れない</span>
           </li>
-        </sc-for>
+        
+          <li style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 4px; border-bottom: 1px solid rgba(52,51,111,.1);">
+            <span style="flex: none; margin-top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #C2A24C; display: inline-flex; align-items: center; justify-content: center; color: #C2A24C; font-size: 11px;">✓</span>
+            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">広報の成果や必要性を、上層部に説明する材料が足りない</span>
+          </li>
+        
+          <li style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 4px; border-bottom: 1px solid rgba(52,51,111,.1);">
+            <span style="flex: none; margin-top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #C2A24C; display: inline-flex; align-items: center; justify-content: center; color: #C2A24C; font-size: 11px;">✓</span>
+            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">新コース設立やチャンネル追加など、つい「足し算」になりがち</span>
+          </li>
+        
+          <li style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 4px; border-bottom: 1px solid rgba(52,51,111,.1);">
+            <span style="flex: none; margin-top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #C2A24C; display: inline-flex; align-items: center; justify-content: center; color: #C2A24C; font-size: 11px;">✓</span>
+            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">広報をひとりで抱え込み、学内に相談できる相手がいない</span>
+          </li>
+        
+          <li style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 4px; border-bottom: 1px solid rgba(52,51,111,.1);">
+            <span style="flex: none; margin-top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #C2A24C; display: inline-flex; align-items: center; justify-content: center; color: #C2A24C; font-size: 11px;">✓</span>
+            <span style="font-size: 15.5px; line-height: 1.75; color: #3C3942;">良い学校なのに、その良さが伝わらない。それが、悔しい</span>
+          </li>
+        
       </ul>
     </div>
   </section>
@@ -184,19 +145,37 @@
         <h2 style="font-family: var(--font-head, serif); font-size: clamp(26px, 3vw, 40px); line-height: 1.55; color: #34336F; margin: 18px 0 0; letter-spacing: .04em;">選ばれる理由</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.4vw, 34px);">
-        <sc-for list="{{ cores }}" as="c" hint-placeholder-count="3">
+        
           <article data-fade style="background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; padding: clamp(28px, 2.6vw, 40px); display: flex; flex-direction: column; gap: 18px; box-shadow: 0 22px 54px -34px rgba(52,51,111,.4);">
             <div style="display: flex; align-items: baseline; justify-content: space-between;">
-              <span style="font-family: var(--font-head, serif); font-size: 30px; color: #C7B5DE;">{{ c.num }}</span>
-              <span style="font-size: 10px; letter-spacing: .22em; color: #C2A24C; text-transform: uppercase;">{{ c.en }}</span>
+              <span style="font-family: var(--font-head, serif); font-size: 30px; color: #C7B5DE;">01</span>
+              <span style="font-size: 10px; letter-spacing: .22em; color: #C2A24C; text-transform: uppercase;">On Your Side</span>
             </div>
-            <h3 style="font-family: var(--font-head, serif); font-size: 19px; line-height: 1.6; color: #34336F; margin: 0; letter-spacing: .03em;">{{ c.title }}</h3>
-            <p style="font-size: 14px; line-height: 1.95; color: #56535E; margin: 0;">{{ c.body }}</p>
+            <h3 style="font-family: var(--font-head, serif); font-size: 19px; line-height: 1.6; color: #34336F; margin: 0; letter-spacing: .03em;">学校現場の事情がわかる</h3>
+            <p style="font-size: 14px; line-height: 1.95; color: #56535E; margin: 0;">教員として12年、学校広報の専任担当として4年。現場の忙しさや校内調整の難しさをふまえ、無理なく進められる広報を提案します。</p>
           </article>
-        </sc-for>
+        
+          <article data-fade style="background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; padding: clamp(28px, 2.6vw, 40px); display: flex; flex-direction: column; gap: 18px; box-shadow: 0 22px 54px -34px rgba(52,51,111,.4);">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: var(--font-head, serif); font-size: 30px; color: #C7B5DE;">02</span>
+              <span style="font-size: 10px; letter-spacing: .22em; color: #C2A24C; text-transform: uppercase;">End to End</span>
+            </div>
+            <h3 style="font-family: var(--font-head, serif); font-size: 19px; line-height: 1.6; color: #34336F; margin: 0; letter-spacing: .03em;">ブランディングから実務まで相談できる</h3>
+            <p style="font-size: 14px; line-height: 1.95; color: #56535E; margin: 0;">ブランディング設計、広報・PR戦略、発信企画、SNS・HP、プレスリリース作成、メディア対応まで。必要な支援を分断せず、学校の状況に合わせて組み立てます。</p>
+          </article>
+        
+          <article data-fade style="background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; padding: clamp(28px, 2.6vw, 40px); display: flex; flex-direction: column; gap: 18px; box-shadow: 0 22px 54px -34px rgba(52,51,111,.4);">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-family: var(--font-head, serif); font-size: 30px; color: #C7B5DE;">03</span>
+              <span style="font-size: 10px; letter-spacing: .22em; color: #C2A24C; text-transform: uppercase;">Built to Last</span>
+            </div>
+            <h3 style="font-family: var(--font-head, serif); font-size: 19px; line-height: 1.6; color: #34336F; margin: 0; letter-spacing: .03em;">担当者が続けられる形にする</h3>
+            <p style="font-size: 14px; line-height: 1.95; color: #56535E; margin: 0;">外注して終わりではなく、校内で続けられる仕組みづくりまで支援します。月1回の定例から、小さく始めることもできます。</p>
+          </article>
+        
       </div>
       <div data-fade style="text-align: center; margin-top: clamp(40px, 5vw, 64px);">
-        <a href="Service.html" style="{{ ctaGhost }}">広報・PR戦略・ブランディングについて</a>
+        <a href="Service.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;">広報・PR戦略・ブランディングについて</a>
       </div>
     </div>
   </section>
@@ -210,23 +189,55 @@
         <p style="max-width: 30em; margin: 0 auto; font-size: 14.5px; line-height: 2; color: rgba(243,237,226,.74);">ブランディング設計から発信の実務まで。学校の状況に合わせて、必要なところから進めます。</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(18px, 2.2vw, 30px); row-gap: 0; grid-template-rows: auto auto auto auto auto;">
-        <sc-for list="{{ states }}" as="s" hint-placeholder-count="3">
+        
           <div data-fade style="display: grid; grid-row: 1 / span 5; grid-template-rows: subgrid;">
             <!-- PHOTO -->
             <figure style="margin: 0 0 22px; aspect-ratio: 4/3; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(140deg, rgba(199,181,222,.32), rgba(243,237,226,.16));">
               <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px);"></div>
-              <img src="{{ s.img }}" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+              <img src="https://lh3.googleusercontent.com/d/1vj-swZdg8uFLIGqkZoqwSV2yt2Nh96WW=w800" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
               <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.35), transparent 45%);"></div>
             </figure>
             <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
-              <span style="font-family: var(--font-head, serif); font-size: 13px; letter-spacing: .2em; color: #C2A24C;">{{ s.num }}</span>
+              <span style="font-family: var(--font-head, serif); font-size: 13px; letter-spacing: .2em; color: #C2A24C;">STATE 01</span>
               <span style="height: 1px; flex: 1; background: rgba(255,255,255,.2);"></span>
             </div>
-            <h3 style="font-family: var(--font-head, serif); font-size: 20px; line-height: 1.6; color: #fff; margin: 0 0 12px; letter-spacing: .03em;">{{ s.title }}</h3>
-            <p style="font-size: 13.5px; line-height: 1.95; color: rgba(243,237,226,.78); margin: 0 0 16px;">{{ s.body }}</p>
-            <p style="font-size: 12.5px; line-height: 1.8; color: #C7B5DE; margin: 0;">{{ s.who }}</p>
+            <h3 style="font-family: var(--font-head, serif); font-size: 20px; line-height: 1.6; color: #fff; margin: 0 0 12px; letter-spacing: .03em;">今の広報を棚卸しする</h3>
+            <p style="font-size: 13.5px; line-height: 1.95; color: rgba(243,237,226,.78); margin: 0 0 16px;">現在の広報体制、発信内容、年間スケジュール、課題感を一緒に見渡します。何から手をつけるべきかを整理し、優先順位を決めます。</p>
+            <p style="font-size: 12.5px; line-height: 1.8; color: #C7B5DE; margin: 0;">こんな方に：何から相談すればいいかわからない</p>
           </div>
-        </sc-for>
+        
+          <div data-fade style="display: grid; grid-row: 1 / span 5; grid-template-rows: subgrid;">
+            <!-- PHOTO -->
+            <figure style="margin: 0 0 22px; aspect-ratio: 4/3; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(140deg, rgba(199,181,222,.32), rgba(243,237,226,.16));">
+              <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px);"></div>
+              <img src="https://lh3.googleusercontent.com/d/1xjuV0ZaO2kVh6rBCfDVgQEbOcZmXR_9y=w800" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.35), transparent 45%);"></div>
+            </figure>
+            <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
+              <span style="font-family: var(--font-head, serif); font-size: 13px; letter-spacing: .2em; color: #C2A24C;">STATE 02</span>
+              <span style="height: 1px; flex: 1; background: rgba(255,255,255,.2);"></span>
+            </div>
+            <h3 style="font-family: var(--font-head, serif); font-size: 20px; line-height: 1.6; color: #fff; margin: 0 0 12px; letter-spacing: .03em;">方針を決めて、一緒に動かす</h3>
+            <p style="font-size: 13.5px; line-height: 1.95; color: rgba(243,237,226,.78); margin: 0 0 16px;">ブランディングの方向性や広報・PR戦略をもとに、SNS・HP・プレスリリース・メディア対応などを実際に進めます。</p>
+            <p style="font-size: 12.5px; line-height: 1.8; color: #C7B5DE; margin: 0;">こんな方に：継続的に広報を整えたい</p>
+          </div>
+        
+          <div data-fade style="display: grid; grid-row: 1 / span 5; grid-template-rows: subgrid;">
+            <!-- PHOTO -->
+            <figure style="margin: 0 0 22px; aspect-ratio: 4/3; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(140deg, rgba(199,181,222,.32), rgba(243,237,226,.16));">
+              <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 10px);"></div>
+              <img src="https://lh3.googleusercontent.com/d/1kPLdlwzmyFGsdUj02BYbrzGTYNUqhli3=w800" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.35), transparent 45%);"></div>
+            </figure>
+            <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
+              <span style="font-family: var(--font-head, serif); font-size: 13px; letter-spacing: .2em; color: #C2A24C;">STATE 03</span>
+              <span style="height: 1px; flex: 1; background: rgba(255,255,255,.2);"></span>
+            </div>
+            <h3 style="font-family: var(--font-head, serif); font-size: 20px; line-height: 1.6; color: #fff; margin: 0 0 12px; letter-spacing: .03em;">担当者が続けられる形に残す</h3>
+            <p style="font-size: 13.5px; line-height: 1.95; color: rgba(243,237,226,.78); margin: 0 0 16px;">テンプレート、運用ルール、引き継ぎ資料などを整え、担当者が替わっても広報が止まらない土台をつくります。</p>
+            <p style="font-size: 12.5px; line-height: 1.8; color: #C7B5DE; margin: 0;">こんな方に：将来的には校内で運用したい</p>
+          </div>
+        
       </div>
       <div data-fade style="text-align: center; margin-top: clamp(44px, 5vw, 68px);">
         <a href="Contact.html" style="display: inline-flex; align-items: center; gap: 9px; font-size: 14px; letter-spacing: .05em; color: #34336F; background: #F3EDE2; padding: 14px 30px; border-radius: 999px; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(194,162,76,.55);">お見積もり・ご相談はこちら</a>
@@ -239,7 +250,7 @@
   <section style="padding: clamp(80px, 11vw, 150px) clamp(20px, 6vw, 80px); background: #fff;">
     <div style="max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(36px, 5vw, 74px); align-items: center;">
       <figure data-fade style="margin: 0; aspect-ratio: 4/5; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(150deg, #E6DCF0, #F1E9DD 60%, #E4DAC4); box-shadow: 0 26px 64px -34px rgba(52,51,111,.5);">
-        <img src="https://lh3.googleusercontent.com/d/1KSb2Ed_fqhlr0HbyK6mVbnWOKG6VuLns=w900" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%;" alt="代表ポートレート">
+        <img src="https://lh3.googleusercontent.com/d/1KSb2Ed_fqhlr0HbyK6mVbnWOKG6VuLns=w1000" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%;" alt="代表ポートレート">
       </figure>
       <div data-fade>
         <span style="font-size: 11px; letter-spacing: .32em; color: #C2A24C; text-transform: uppercase;">About / Profile</span>
@@ -249,7 +260,7 @@
           <span style="font-family: var(--font-head, serif); font-size: 19px; color: #34336F; letter-spacing: .06em;">橋本 花織</span>
           <span style="font-size: 12px; letter-spacing: .12em; color: #8A8694;">Hanaui PR 代表 / 広報コンサルタント</span>
         </div>
-        <div style="margin-top: 30px;"><a href="About.html" style="{{ ctaGhost }}">私たちについて</a></div>
+        <div style="margin-top: 30px; display: flex; gap: 24px; flex-wrap: wrap; align-items: center;"><a href="About.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;">私たちについて</a><a href="Story.html" style="font-size: 13px; letter-spacing: .06em; color: #8A8694; text-decoration: none; border-bottom: 1px solid rgba(138,134,148,.4); padding-bottom: 4px;">はじまりの物語</a></div>
       </div>
     </div>
   </section>
@@ -262,22 +273,46 @@
           <span style="font-size: 11px; letter-spacing: .32em; color: #C2A24C; text-transform: uppercase;">Works</span>
           <h2 style="font-family: var(--font-head, serif); font-size: clamp(26px, 3vw, 40px); line-height: 1.5; color: #34336F; margin: 16px 0 0; letter-spacing: .04em;">学校広報支援の事例</h2>
         </div>
-        <a href="Works.html" style="{{ ctaGhost }}">実績一覧へ</a>
+        <a href="Works.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;">実績一覧へ</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.2vw, 30px);">
-        <sc-for list="{{ works }}" as="wk" hint-placeholder-count="3">
+        
           <article data-fade style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; overflow: hidden;">
             <figure style="margin: 0; aspect-ratio: 3/2; position: relative; background: linear-gradient(140deg, #ECE4F2, #F1E9DD 60%, #E4DAC4);">
               <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px);"></div>
-              <img src="{{ wk.img }}" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+              <img src="assets/works-case01-diagnosis.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
             </figure>
             <div style="padding: 24px 24px 28px;">
-              <span style="display: inline-block; font-size: 11px; letter-spacing: .08em; color: #34336F; background: rgba(199,181,222,.28); padding: 4px 11px; border-radius: 999px;">{{ wk.tag }}</span>
-              <h3 style="font-family: var(--font-head, serif); font-size: 17px; line-height: 1.65; color: #34336F; margin: 16px 0 10px; letter-spacing: .02em;">{{ wk.title }}</h3>
-              <p style="font-size: 13px; line-height: 1.9; color: #56535E; margin: 0;">{{ wk.body }}</p>
+              <span style="display: inline-block; font-size: 11px; letter-spacing: .08em; color: #34336F; background: rgba(199,181,222,.28); padding: 4px 11px; border-radius: 999px;">単発相談</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 17px; line-height: 1.65; color: #34336F; margin: 16px 0 10px; letter-spacing: .02em;">広報セカンドオピニオン</h3>
+              <p style="font-size: 13px; line-height: 1.9; color: #56535E; margin: 0;">第三者の視点で広報の現状を整理。強み・課題・次の一手を見える形にしました。</p>
             </div>
           </article>
-        </sc-for>
+        
+          <article data-fade style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; overflow: hidden;">
+            <figure style="margin: 0; aspect-ratio: 3/2; position: relative; background: linear-gradient(140deg, #ECE4F2, #F1E9DD 60%, #E4DAC4);">
+              <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px);"></div>
+              <img src="assets/works-case02-meeting.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            </figure>
+            <div style="padding: 24px 24px 28px;">
+              <span style="display: inline-block; font-size: 11px; letter-spacing: .08em; color: #34336F; background: rgba(199,181,222,.28); padding: 4px 11px; border-radius: 999px;">継続支援</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 17px; line-height: 1.65; color: #34336F; margin: 16px 0 10px; letter-spacing: .02em;">伴走サポート</h3>
+              <p style="font-size: 13px; line-height: 1.9; color: #56535E; margin: 0;">定例を軸に、発信の優先順位や企画の進め方を整理。担当者が相談しながら進められる広報運用をつくりました。</p>
+            </div>
+          </article>
+        
+          <article data-fade style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(52,51,111,.08); border-radius: 4px; overflow: hidden;">
+            <figure style="margin: 0; aspect-ratio: 3/2; position: relative; background: linear-gradient(140deg, #ECE4F2, #F1E9DD 60%, #E4DAC4);">
+              <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 10px);"></div>
+              <img src="assets/works-case03-materials.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            </figure>
+            <div style="padding: 24px 24px 28px;">
+              <span style="display: inline-block; font-size: 11px; letter-spacing: .08em; color: #34336F; background: rgba(199,181,222,.28); padding: 4px 11px; border-radius: 999px;">継続・包括支援</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 17px; line-height: 1.65; color: #34336F; margin: 16px 0 10px; letter-spacing: .02em;">ワンストップ広報</h3>
+              <p style="font-size: 13px; line-height: 1.9; color: #56535E; margin: 0;">ブランディング設計、広報・PR戦略、プレスリリース、メディア対応まで包括的に支援しました。</p>
+            </div>
+          </article>
+        
       </div>
     </div>
   </section>
@@ -318,21 +353,43 @@
           <span style="font-size: 11px; letter-spacing: .32em; color: #C2A24C; text-transform: uppercase;">note / Journal</span>
           <h2 style="font-family: var(--font-head, serif); font-size: clamp(24px, 2.7vw, 34px); line-height: 1.55; color: #34336F; margin: 16px 0 0; letter-spacing: .04em;">noteで、広報の考え方を書いています。</h2>
         </div>
-        <a href="https://note.com" target="_blank" rel="noopener" style="{{ ctaGhost }}">noteを読む</a>
+        <a href="https://note.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;">noteを読む</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.4vw, 30px);">
-        <sc-for list="{{ notes }}" as="n" hint-placeholder-count="4">
+        
           <a href="https://note.com" target="_blank" rel="noopener" data-fade style="text-decoration: none; display: flex; flex-direction: column; gap: 14px;">
             <figure style="margin: 0; aspect-ratio: 16/9; position: relative; border-radius: 3px; overflow: hidden; background: #F4EEE1;">
-              <img src="{{ n.img }}" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;" alt="">
+              <img src="assets/note-start.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;" alt="">
             </figure>
             <div>
-              <span style="font-size: 10.5px; letter-spacing: .1em; color: #C2A24C;">{{ n.cat }}</span>
-              <h3 style="font-family: var(--font-head, serif); font-size: 14.5px; line-height: 1.65; color: #34336F; margin: 7px 0 6px;">{{ n.title }}</h3>
-              <span style="font-size: 11px; color: #8A8694;">{{ n.date }}</span>
+              <span style="font-size: 10.5px; letter-spacing: .1em; color: #C2A24C;">広報の進め方</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 14.5px; line-height: 1.65; color: #34336F; margin: 7px 0 6px;">学校広報は、何から始めればいい？</h3>
+              <span style="font-size: 11px; color: #8A8694;">2026.06</span>
             </div>
           </a>
-        </sc-for>
+        
+          <a href="https://note.com" target="_blank" rel="noopener" data-fade style="text-decoration: none; display: flex; flex-direction: column; gap: 14px;">
+            <figure style="margin: 0; aspect-ratio: 16/9; position: relative; border-radius: 3px; overflow: hidden; background: #F4EEE1;">
+              <img src="assets/note-system.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;" alt="">
+            </figure>
+            <div>
+              <span style="font-size: 10.5px; letter-spacing: .1em; color: #C2A24C;">ノウハウ</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 14.5px; line-height: 1.65; color: #34336F; margin: 7px 0 6px;">担当者が替わっても続く広報のつくり方</h3>
+              <span style="font-size: 11px; color: #8A8694;">2026.05</span>
+            </div>
+          </a>
+        
+          <a href="https://note.com" target="_blank" rel="noopener" data-fade style="text-decoration: none; display: flex; flex-direction: column; gap: 14px;">
+            <figure style="margin: 0; aspect-ratio: 16/9; position: relative; border-radius: 3px; overflow: hidden; background: #F4EEE1;">
+              <img src="assets/note-ideas.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;" alt="">
+            </figure>
+            <div>
+              <span style="font-size: 10.5px; letter-spacing: .1em; color: #C2A24C;">発信のネタ</span>
+              <h3 style="font-family: var(--font-head, serif); font-size: 14.5px; line-height: 1.65; color: #34336F; margin: 7px 0 6px;">発信のネタが見つからないときに</h3>
+              <span style="font-size: 11px; color: #8A8694;">2026.05</span>
+            </div>
+          </a>
+        
       </div>
     </div>
   </section>
@@ -345,15 +402,39 @@
         <h2 style="font-family: var(--font-head, serif); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.5; color: #34336F; margin: 14px 0 0; letter-spacing: .04em;">ふだんの様子は、Instagram で。</h2>
       </div>
       <div data-fade style="display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(10px, 1.2vw, 16px);">
-        <sc-for list="{{ igTiles }}" as="g" hint-placeholder-count="6">
+        
           <a href="https://instagram.com" target="_blank" rel="noopener" style="display: block; aspect-ratio: 4/5; position: relative; border-radius: 2px; overflow: hidden; background: linear-gradient(140deg, #E6DCF0, #F1E9DD 60%, #E4DAC4);">
             <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px);"></div>
-            <img src="{{ g }}" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            <img src="assets/ig-1-branding.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.18), transparent 60%); opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"></div>
           </a>
-        </sc-for>
+        
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="display: block; aspect-ratio: 4/5; position: relative; border-radius: 2px; overflow: hidden; background: linear-gradient(140deg, #E6DCF0, #F1E9DD 60%, #E4DAC4);">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px);"></div>
+            <img src="assets/ig-2-system.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.18), transparent 60%); opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"></div>
+          </a>
+        
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="display: block; aspect-ratio: 4/5; position: relative; border-radius: 2px; overflow: hidden; background: linear-gradient(140deg, #E6DCF0, #F1E9DD 60%, #E4DAC4);">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px);"></div>
+            <img src="assets/ig-3-sns.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.18), transparent 60%); opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"></div>
+          </a>
+        
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="display: block; aspect-ratio: 4/5; position: relative; border-radius: 2px; overflow: hidden; background: linear-gradient(140deg, #E6DCF0, #F1E9DD 60%, #E4DAC4);">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px);"></div>
+            <img src="assets/ig-4-opencampus.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.18), transparent 60%); opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"></div>
+          </a>
+        
+          <a href="https://instagram.com" target="_blank" rel="noopener" style="display: block; aspect-ratio: 4/5; position: relative; border-radius: 2px; overflow: hidden; background: linear-gradient(140deg, #E6DCF0, #F1E9DD 60%, #E4DAC4);">
+            <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px), repeating-linear-gradient(0deg, rgba(52,51,111,.05) 0 1px, transparent 1px 9px);"></div>
+            <img src="assets/ig-5-start.png" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,31,72,.18), transparent 60%); opacity: 0; transition: opacity .3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0"></div>
+          </a>
+        
       </div>
-      <div data-fade style="text-align: center; margin-top: 28px;"><a href="https://instagram.com" target="_blank" rel="noopener" style="{{ ctaGhost }}">@hanaui_pr をフォロー</a></div>
+      <div data-fade style="text-align: center; margin-top: 28px;"><a href="https://instagram.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;">@hanaui_pr をフォロー</a></div>
     </div>
   </section>
 
@@ -363,18 +444,16 @@
       <div data-fade>
         <span style="font-size: 11px; letter-spacing: .32em; color: #C2A24C; text-transform: uppercase;">3min Mail Magazine</span>
         <h2 style="font-family: var(--font-head, serif); font-size: clamp(24px, 2.7vw, 34px); line-height: 1.55; color: #34336F; margin: 16px 0 14px; letter-spacing: .04em;">3min 学校広報メルマガ</h2>
-        <p style="font-size: 14px; line-height: 2; color: #56535E; margin: 0 0 18px; max-width: 26em;">発信のネタづくり、広報担当者の悩み、学校の魅力の伝え方などを、不定期でお届けします。配信はいつでも解除できます。</p>
+        <p style="font-size: 14px; line-height: 2; color: #56535E; margin: 0 0 18px; max-width: 26em;">忙しい広報担当者のための、通勤中に3分でサクッと読めるメルマガ。学校広報の最新トレンドやすぐ使えるPRネタを毎週配信中。配信はいつでも解除できます。</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin: 0 0 26px; max-width: 28em;">
-          <p style="font-size: 12.5px; line-height: 1.8; color: #34336F; margin: 0; padding-left: 14px; border-left: 2px solid #C7B5DE;">通勤電車で他校のSNSをチェックする、その合間に。3分でサクッと読める「入試広報」の最新トレンド。</p>
-          <p style="font-size: 12.5px; line-height: 1.8; color: #34336F; margin: 0; padding-left: 14px; border-left: 2px solid #C7B5DE;">カップラーメンができるまでに。忙しい広報担当者のための、明日から使える学校PR術。</p>
         </div>
-        <form onSubmit="{{ onSubscribe }}" style="display: flex; gap: 10px; max-width: 420px; flex-wrap: wrap;">
+        <form onsubmit="return false;" style="display: flex; gap: 10px; max-width: 420px; flex-wrap: wrap;">
           <input type="email" placeholder="メールアドレス" style="flex: 1; min-width: 200px; padding: 14px 16px; border: 1px solid rgba(52,51,111,.2); border-radius: 4px; font-size: 14px; font-family: inherit; color: #3C3942; background: #FBF8F2;">
           <button type="submit" style="font-size: 14px; letter-spacing: .04em; color: #fff; background: #34336F; padding: 14px 26px; border: none; border-radius: 4px; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(194,162,76,.5);">登録する</button>
         </form>
       </div>
       <figure data-fade style="margin: 0; aspect-ratio: 4/5; position: relative; border-radius: 3px; overflow: hidden; background: linear-gradient(150deg, #E6DCF0, #F1E9DD 60%, #E4DAC4); box-shadow: 0 24px 60px -36px rgba(52,51,111,.45);">
-        <img src="https://lh3.googleusercontent.com/d/1DmHJkaNII0-olz1OA5aV-K5HKfNN1mYO=w900" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="中景ポートレート">
+        <img src="https://lh3.googleusercontent.com/d/1DmHJkaNII0-olz1OA5aV-K5HKfNN1mYO=w1000" referrerpolicy="no-referrer" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" alt="中景ポートレート">
       </figure>
     </div>
   </section>
@@ -403,20 +482,21 @@
       <div>
         <span style="font-size: 10px; letter-spacing: .24em; color: #8A8694; text-transform: uppercase;">Sitemap</span>
         <ul style="list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-          <li><a href="About.html" style="{{ footLink }}">About</a></li>
-          <li><a href="Service.html" style="{{ footLink }}">Service</a></li>
-          <li><a href="Works.html" style="{{ footLink }}">Works</a></li>
-          <li><a href="https://note.com" target="_blank" rel="noopener" style="{{ footLink }}">note</a></li>
-          <li><a href="Contact.html" style="{{ footLink }}">Contact</a></li>
-          <li><a href="Company.html" style="{{ footLink }}">Company</a></li>
+          <li><a href="About.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">About</a></li>
+          <li><a href="Story.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Story</a></li>
+          <li><a href="Service.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Service</a></li>
+          <li><a href="Works.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Works</a></li>
+          <li><a href="https://note.com" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">note</a></li>
+          <li><a href="Contact.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Contact</a></li>
+          <li><a href="Company.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Company</a></li>
         </ul>
       </div>
       <div>
         <span style="font-size: 10px; letter-spacing: .24em; color: #8A8694; text-transform: uppercase;">Connect</span>
         <ul style="list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-          <li><a href="https://instagram.com" target="_blank" rel="noopener" style="{{ footLink }}">Instagram</a></li>
-          <li><a href="Contact.html#mailmagazine" style="{{ footLink }}">メルマガ登録</a></li>
-          <li><a href="Contact.html" style="{{ footLink }}">ご相談・お見積もり</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">Instagram</a></li>
+          <li><a href="Contact.html#mailmagazine" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">メルマガ登録</a></li>
+          <li><a href="Contact.html" style="font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;">ご相談・お見積もり</a></li>
         </ul>
       </div>
     </div>
@@ -438,131 +518,27 @@
   </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280, &quot;height&quot;: 900}}">
-class Component extends DCLogic {
-  state = { hero: 'B', font: 1 };
-  rootRef = React.createRef();
-
-  componentDidMount() { this._observe(); }
-
-  _observe() {
-    const root = this.rootRef.current;
-    if (!root) return;
-    const els = root.querySelectorAll('[data-fade]');
-    els.forEach(el => {
-      if (el.dataset.fadeDone) return;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(22px)';
-      el.style.transition = 'opacity 1s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
-    });
-    const reveal = (el) => {
-      el.style.opacity = '1';
-      el.style.transform = 'none';
-      el.dataset.fadeDone = '1';
-    };
-    // Immediately reveal anything already within (or above) the initial viewport.
-    const vh = window.innerHeight || 800;
-    els.forEach(el => {
-      const r = el.getBoundingClientRect();
-      if (r.top < vh * 0.92) reveal(el);
-    });
-    if (typeof IntersectionObserver === 'function') {
-      if (this._io) this._io.disconnect();
-      this._io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { reveal(e.target); this._io.unobserve(e.target); } });
-      }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
-      els.forEach(el => { if (!el.dataset.fadeDone) this._io.observe(el); });
-    } else {
-      els.forEach(reveal);
-    }
-    // Fail-safe: never leave content hidden even if the observer never fires.
-    clearTimeout(this._fadeFallback);
-    this._fadeFallback = setTimeout(() => {
-      root.querySelectorAll('[data-fade]').forEach(el => { if (!el.dataset.fadeDone) reveal(el); });
-    }, 1600);
-  }
-
-  _btn(active) {
-    const base = 'width:26px;height:26px;border-radius:7px;border:1px solid;cursor:pointer;font-size:12px;font-family:inherit;transition:all .2s;';
-    return active
-      ? base + 'background:#34336F;color:#fff;border-color:#34336F;'
-      : base + 'background:transparent;color:#8A8694;border-color:rgba(52,51,111,.2);';
-  }
-
-  renderVals() {
-    const fonts = {
-      1: { head: "'Noto Serif JP', serif", body: "'Noto Sans JP', sans-serif", label: '1. Noto Serif JP × Noto Sans JP（端正・無難）' },
-      2: { head: "'Shippori Mincho', serif", body: "'Zen Kaku Gothic New', sans-serif", label: '2. Shippori Mincho × Zen Kaku Gothic（上品・やや個性）' },
-      3: { head: "'Zen Old Mincho', serif", body: "'Zen Kaku Gothic Antique', sans-serif", label: '3. Zen Old Mincho × Zen Kaku Antique（古典・織物的）' },
-    };
-    const f = fonts[this.state.font] || fonts[1];
-    const navLink = 'font-size:13px;letter-spacing:.06em;color:#3C3942;text-decoration:none;';
-    const footLink = 'font-size:13px;letter-spacing:.04em;color:rgba(243,237,226,.72);text-decoration:none;';
-    const ctaPrimary = 'display:inline-flex;align-items:center;gap:9px;font-size:14px;letter-spacing:.05em;color:#fff;background:#34336F;padding:15px 30px;border-radius:999px;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(194,162,76,.55),0 10px 26px -14px rgba(52,51,111,.7);';
-    const ctaGhost = 'display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;color:#34336F;text-decoration:none;border-bottom:1px solid rgba(194,162,76,.7);padding-bottom:4px;';
-
-    return {
-      rootRef: this.rootRef,
-      headStack: f.head,
-      bodyStack: f.body,
-      fontLabel: f.label,
-      isA: this.state.hero === 'A',
-      isB: this.state.hero === 'B',
-      isC: this.state.hero === 'C',
-      heroBtnA: this._btn(this.state.hero === 'A'),
-      heroBtnB: this._btn(this.state.hero === 'B'),
-      heroBtnC: this._btn(this.state.hero === 'C'),
-      fontBtn1: this._btn(this.state.font === 1),
-      fontBtn2: this._btn(this.state.font === 2),
-      fontBtn3: this._btn(this.state.font === 3),
-      pickHeroA: () => this.setState({ hero: 'A' }),
-      pickHeroB: () => this.setState({ hero: 'B' }),
-      pickHeroC: () => this.setState({ hero: 'C' }),
-      pickFont1: () => this.setState({ font: 1 }),
-      pickFont2: () => this.setState({ font: 2 }),
-      pickFont3: () => this.setState({ font: 3 }),
-      navLink, footLink, ctaPrimary, ctaGhost,
-      onSubscribe: (e) => { e.preventDefault(); },
-      worries: [
-        '募集広報や事務作業に追われ、日々の発信まで手が回らない',
-        'SNSやHPを更新しているけれど、募集につながっている実感がない',
-        '学校の強みを、まだ自分たちの言葉で言い切れていない',
-        'オープンキャンパスや説明会の魅力をうまく伝えきれていない',
-        'プレスリリースやメディア対応に取り組みたいが、何から始めればいいかわからない',
-        '担当者が替わるたびに、広報のやり方がリセットされてしまう',
-        '外注したいけれど、丸投げになってしまうのは不安',
-      ],
-      cores: [
-        { num: '01', en: 'On Your Side', title: '学校現場の事情がわかる', body: '教員として12年、学校広報の専任担当として4年。現場の忙しさや校内調整の難しさをふまえ、無理なく進められる広報を提案します。' },
-        { num: '02', en: 'End to End', title: 'ブランディングから実務まで相談できる', body: 'ブランディング設計、広報・PR戦略、発信企画、SNS・HP、プレスリリース作成、メディア対応まで。必要な支援を分断せず、学校の状況に合わせて組み立てます。' },
-        { num: '03', en: 'Built to Last', title: '担当者が続けられる形にする', body: '外注して終わりではなく、校内で続けられる仕組みづくりまで支援します。月1回の定例から、小さく始めることもできます。' },
-      ],
-      states: [
-        { num: 'STATE 01', img: 'https://lh3.googleusercontent.com/d/1vj-swZdg8uFLIGqkZoqwSV2yt2Nh96WW=w800', cut: '撮影カット 16', cap: '現状を見つめ直すカット／資料を広げて', title: '今の広報を棚卸しする', body: '現在の広報体制、発信内容、年間スケジュール、課題感を一緒に見渡します。何から手をつけるべきかを整理し、優先順位を決めます。', who: 'こんな方に：何から相談すればいいかわからない' },
-        { num: 'STATE 02', img: 'https://lh3.googleusercontent.com/d/1xjuV0ZaO2kVh6rBCfDVgQEbOcZmXR_9y=w800', cut: '撮影カット 18', cap: '担当者との打ち合わせのシーン', title: '方針を決めて、一緒に動かす', body: 'ブランディングの方向性や広報・PR戦略をもとに、SNS・HP・プレスリリース・メディア対応などを実際に進めます。', who: 'こんな方に：継続的に広報を整えたい' },
-        { num: 'STATE 03', img: 'https://lh3.googleusercontent.com/d/1kPLdlwzmyFGsdUj02BYbrzGTYNUqhli3=w800', cut: '撮影カット 22', cap: '担当者が自分で発信する様子', title: '担当者が続けられる形に残す', body: 'テンプレート、運用ルール、引き継ぎ資料などを整え、担当者が替わっても広報が止まらない土台をつくります。', who: 'こんな方に：将来的には校内で運用したい' },
-      ],
-      works: [
-        { cut: '', img: 'assets/opt/works-case01-diagnosis.jpg', cap: '', tag: '単発相談', title: '広報セカンドオピニオン', body: '第三者の視点で広報の現状を整理。強み・課題・次の一手を見える形にしました。' },
-        { cut: '', img: 'assets/opt/works-case02-meeting.jpg', cap: '', tag: '継続支援', title: '伴走サポート', body: '定例を軸に、発信の優先順位や企画の進め方を整理。担当者が相談しながら進められる広報運用をつくりました。' },
-        { cut: '', img: 'assets/opt/works-case03-materials.jpg', cap: '', tag: '継続・包括支援', title: 'ワンストップ広報', body: 'ブランディング設計、広報・PR戦略、プレスリリース、メディア対応まで包括的に支援しました。' },
-      ],
-      notes: [
-        { cat: '広報の進め方', title: '学校広報は、何から始めればいい？', date: '2026.06', img: 'assets/opt/note-start.jpg', cap: '' },
-        { cat: 'ノウハウ', title: '担当者が替わっても続く広報のつくり方', date: '2026.05', img: 'assets/opt/note-system.jpg', cap: '' },
-        { cat: '発信のネタ', title: '発信のネタが見つからないときに', date: '2026.05', img: 'assets/opt/note-ideas.jpg', cap: '' },
-      ],
-      igTiles: [
-        'assets/opt/ig-1-branding.jpg',
-        'assets/opt/ig-2-system.jpg',
-        'assets/opt/ig-3-sns.jpg',
-        'assets/opt/ig-4-opencampus.jpg',
-        'assets/opt/ig-5-start.jpg',
-      ],
-    };
-  }
-}
+<script>
+(function () {
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-fade]'));
+  els.forEach(function (el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = 'opacity 1s cubic-bezier(.22,.61,.36,1), transform 1s cubic-bezier(.22,.61,.36,1)';
+  });
+  function reveal(el) { el.style.opacity = '1'; el.style.transform = 'none'; el.dataset.fadeDone = '1'; }
+  var vh = window.innerHeight || 800;
+  els.forEach(function (el) { if (el.getBoundingClientRect().top < vh * 0.92) reveal(el); });
+  if (typeof IntersectionObserver === 'function') {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+    els.forEach(function (el) { if (!el.dataset.fadeDone) io.observe(el); });
+  } else { els.forEach(reveal); }
+  setTimeout(function () {
+    document.querySelectorAll('[data-fade]').forEach(function (el) { if (!el.dataset.fadeDone) reveal(el); });
+  }, 1600);
+})();
 </script>
 </body>
 </html>
